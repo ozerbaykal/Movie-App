@@ -1,14 +1,17 @@
 import { FaHome } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { MdFavoriteBorder } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
         <div className="p-3 flex justify-between items-center gap-5">
             <div className="bg-amber-500 p-2 rounded-md cursor-pointer hover:opacity-80">
-                <h1 className="text- text-black text-2xl md:text-3xl lg:text-4xl font-semibold">
-                    MovieApp
-                </h1>
+                <Link to="/">
+                    <h1 className="text- text-black text-2xl md:text-3xl lg:text-4xl font-semibold">
+                        MovieApp
+                    </h1>
+                </Link>
             </div>
 
             <div className="flex items-center gap-1 w-full md:w-3/4 justify-center p-2   ">
@@ -21,16 +24,16 @@ const Header = () => {
             </div>
 
             <div className="flex gap-5 items-center mx-2 ">
-                <div className="flex gap-3 items-center">
-                    <button>
+                <div className="flex gap-3 md:gap-6 items-center">
+                    <Link to="/" className="hover:text-amber-500">
                         <FaHome size={28} />
-                    </button>
-                    <button>
+                    </Link>
+                    <Link to="/my-list" className="hover:text-red-500">
                         <MdFavoriteBorder size={28} />
-                    </button>
+                    </Link>
                 </div>
 
-                <div className=" items-center hidden lg:flex gap-2 ">
+                <div className=" items-center hidden lg:flex gap-4 ">
                     <span className="bg-gray-400 hover:bg-amber-500 hover:text-black px-2 py-1 rounded-md cursor-pointer transiton">
                         LogIn
                     </span>

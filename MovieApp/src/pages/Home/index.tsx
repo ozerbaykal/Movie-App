@@ -1,10 +1,12 @@
 import Container from "../../components/Container"
+import MovieList from "../../components/MovieList"
 
 const Home = () => {
     return (
         <Container>
             <div>
-                <h1>Home</h1>
+                <MovieList category="Populars" endpoint="/movie/popular" />
+
             </div>
         </Container>
     )

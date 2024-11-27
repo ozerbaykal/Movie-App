@@ -40,3 +40,10 @@ export const api = createApi({
     }),
   }),
 });
+
+export const {
+  useGetMoviesQuery,
+  useGetDetailQuery,
+  useAddToFavoriteMutation,
+  useGetFavoritesQuery,
+} = api;

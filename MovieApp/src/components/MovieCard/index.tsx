@@ -11,9 +11,9 @@ type MovieCardProps = {
 const MovieCard = ({ movie }: MovieCardProps) => {
     const { id, poster_path, original_title, vote_average } = movie
     return (
-        <div className="border border-zinc-600 rounded p-4 cursor-pointer hover:bg-zinc-800 h-full max-h-[600px]">
+        <div className="border border-amber-700 border-opacity-40 rounded-md p-4 cursor-pointer hover:bg-amber-700 hover:bg-opacity-20 h-full max-h-[550px]">
             <div className="w-full flex justify-between items-center mb-3">
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1 mb-1">
                     <p className="text-2xl font-semi-bold" >{vote_average.toFixed(1)}</p>
                     <FaStar className="text-amber-400 text-lg" />
 
@@ -22,7 +22,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
                 <LikeButton id={movie.id} />
             </div>
 
-            <Link className="flex flex-col gap-4" to={`/movie/${id}`}>
+            <Link className="flex flex-col gap-4 hover:scale-105 transition" to={`/movie/${id}`} >
                 <img
                     className="rounded-md w-full h-full object-contain"
                     src={baseImgUrl + poster_path}

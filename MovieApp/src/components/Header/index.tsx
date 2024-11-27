@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <div className="p-3 flex justify-between items-center gap-5">
+        <header className="p-3 flex justify-between items-center gap-5">
             <div className="bg-amber-500 p-2 rounded-md cursor-pointer hover:opacity-80">
                 <Link to="/">
                     <h1 className="text- text-black text-2xl md:text-3xl lg:text-4xl font-semibold">
@@ -18,7 +18,7 @@ const Header = () => {
                 <input
                     type="text"
                     placeholder="Film Ara.."
-                    className=" w-full md:w-3/4 border rounded-md px-3 py-2 outline-none text-black"
+                    className=" w-full md:w-3/4 border rounded-md px-3 py-2 outline-none text-black shadow-amber-400 shadow-md"
                 />
                 <CiSearch size={28} />
             </div>
@@ -28,7 +28,7 @@ const Header = () => {
                     <Link to="/" className="hover:text-amber-500">
                         <FaHome size={28} />
                     </Link>
-                    <Link to="/my-list" className="hover:text-red-500">
+                    <Link to="/favorites" className="hover:text-red-500">
                         <MdFavoriteBorder size={28} />
                     </Link>
                 </div>
@@ -42,7 +42,7 @@ const Header = () => {
                     </span>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 

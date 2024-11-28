@@ -1,13 +1,36 @@
-import Container from "../../components/Container"
+import { useGetFavoritesQuery } from "../../ redux/api";
+import Container from "../../components/Container";
+import Error from "../../components/Error";
+import ListContainer from "../../components/ListContainer";
+import Loader from "../../components/Loader";
+import MovieCard from "../../components/MovieCard";
+import Title from "../../components/Title";
+import { movieType } from "../../types";
 
 const Favorites = () => {
+    const { data, isLoading, error } = useGetFavoritesQuery();
     return (
         <Container>
             <div>
-                FAVAURITE PAGE
+                <Title>Favorites</Title>
+                {isLoading ? (
+                    <Loader />
+                ) : error ? (
+                    <Error data={error} />
+                ) : (
+                    data && (
+                        <ListContainer>
+                            {data.results.map((movie: movieType, key: number) => (
+                                <div>
+                                    <MovieCard movie={movie} key={key} />
+                                </div>
+                            ))}
+                        </ListContainer>
+                    )
+                )}
             </div>
         </Container>
-    )
-}
+    );
+};
 
-export default Favorites
+export default Favorites;

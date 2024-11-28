@@ -1,45 +1,40 @@
 import { useGetMoviesQuery } from "../../ redux/api";
 import { movieType } from "../../types";
 import Error from "../Error";
+import ListContainer from "../ListContainer";
 import Loader from "../Loader";
 import MovieCard from "../MovieCard";
 import Title from "../Title";
-
 
 type PropsType = {
     endpoint: string;
     category: string;
 };
 const MovieList = ({ endpoint, category }: PropsType) => {
-
-    const { data, isLoading, error, refetch } = useGetMoviesQuery(endpoint)
+    const { data, isLoading, error, refetch } = useGetMoviesQuery(endpoint);
 
     return (
-        <div >
+        <div>
             <Title>{category}</Title>
-            {
-                isLoading ?
-                    <Loader /> : error ?
-                        <div className="flex justify-center w-full">
-                            <Error data={error} refetch={refetch} />
-
-                        </div>
-                        :
-                        data && (
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                                {data.results.map((movie: movieType, key: number) => (
-                                    <div className="col">
-                                        <MovieCard movie={movie} key={key} />
-                                    </div>
-                                ))}
+            {isLoading ? (
+                <Loader />
+            ) : error ? (
+                <div className="flex justify-center w-full">
+                    <Error data={error} refetch={refetch} />
+                </div>
+            ) : (
+                data && (
+                    <ListContainer>
+                        {data.results.map((movie: movieType, key: number) => (
+                            <div className="col">
+                                <MovieCard movie={movie} key={key} />
                             </div>
-
-                        )
-            }
-
-
+                        ))}
+                    </ListContainer>
+                )
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default MovieList
+export default MovieList;

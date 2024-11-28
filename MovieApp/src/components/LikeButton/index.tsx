@@ -1,7 +1,23 @@
+import { MdFavoriteBorder } from "react-icons/md"
 
-const LikeButton = ({ id }: { id?: number }) => {
+type Props = {
+    id: number,
+    designs?: string,
+    children?: JSX.Element
+}
+
+const LikeButton = ({ id, designs, children }: Props) => {
+
     return (
-        <div>LikeButton</div>
+        <div >
+            <span className={` flex items-center gap-1 text-lg md:text-xl rounded-md opacity-70 hover:opacity-100 transition cursor-pointer  ${designs}`}>
+                {children}
+
+                <MdFavoriteBorder size={30} />
+            </span>
+
+
+        </div>
     )
 }
 

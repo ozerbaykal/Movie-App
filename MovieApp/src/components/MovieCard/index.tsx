@@ -19,12 +19,12 @@ const MovieCard = ({ movie }: MovieCardProps) => {
 
 
                 </div>
-                <LikeButton id={movie.id} />
+                <LikeButton id={movie.id} designs="text-red-600 hover:scale-125" />
             </div>
 
-            <Link className="flex flex-col gap-4 hover:scale-105 transition" to={`/movie/${id}`} >
+            <Link className="flex flex-col gap-4 transition " to={`/movie/${id}`} >
                 <img
-                    className="rounded-md w-full h-full object-contain"
+                    className="rounded-md w-full h-full object-contain hover:scale-110 transition"
                     src={baseImgUrl + poster_path}
                 />
 

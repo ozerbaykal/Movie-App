@@ -4,7 +4,7 @@ import Container from "../../components/Container"
 import MovieList from "../../components/MovieList"
 
 const Home = () => {
-    const [selected, setSelected] = useState<string | null>(null);
+    const [selected, setSelected] = useState<string | null>("Trending");
     const categories = [
         { name: "Populars", endpoint: "/movie/popular" },
         { name: "Trending", endpoint: "/trending/movie/day" },

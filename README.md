@@ -2,27 +2,27 @@
 
 Movie App is a modern, user-friendly application that allows users to explore popular movies, view detailed information, and manage their favorite movies. It uses the The Movie Database (TMDb) API to fetch movie data and offers a sleek design powered by TailwindCSS.
 
-## Screenshots 🖼️
+## Screenshots
 
 ### video gif
 
-![](./src/assets/images/screenrecord.gif)
+![](./MovieApp/src/assets/images/screenrecord.gif)
 
 ### Homepage
 
 (Displays movies categorized as Top Rated, Trending, and Popular)
-![](./src/assets/images/mainpage.png)
+![](./MovieApp/src/assets/images/mainpage.png)
 
 ### Movie Details Page
 
 (View detailed information about the selected movie)
-![](./src/assets/images/detailpage.png)
+![](./MovieApp/src/assets/images/detailpage.png)
 
 ### Favorites Page
 
 (View and manage your favorite movies)
 
-![](./src/assets/images/favoritepage.png)
+![](./MovieApp/src/assets/images/favoritepage.png)
 
 ## Features 🌟
 

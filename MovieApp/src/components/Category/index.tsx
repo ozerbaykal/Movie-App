@@ -25,7 +25,7 @@ const Category = ({ setSelected, selected }: SelectedCategory) => {
 
         {
             menu.map((item, key) => (
-                <Title key={key} designs={` transition ${selected === item.name ? "text-amber-600 scale-110 underline text-underline-offset-2  " : "hover:text-amber-600"} cursor-pointer `}
+                <Title key={key} designs={` transition ${selected === item.name ? "text-amber-600 scale-110  " : "hover:text-amber-600"} cursor-pointer `}
                     onClick={() => handleTitleClick(item.name)}
                 >
                     {item.name}

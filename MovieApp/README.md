@@ -1,50 +1,101 @@
-# React + TypeScript + Vite
+# Movie App 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Movie App is a modern, user-friendly application that allows users to explore popular movies, view detailed information, and manage their favorite movies. It uses the The Movie Database (TMDb) API to fetch movie data and offers a sleek design powered by TailwindCSS.
 
-Currently, two official plugins are available:
+## Screenshots 🖼️
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### video gif
 
-## Expanding the ESLint configuration
+![](./src/assets/images/screenrecord.gif)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Homepage
 
-- Configure the top-level `parserOptions` property like this:
+(Displays movies categorized as Top Rated, Trending, and Popular)
+![](./src/assets/images/mainpage.png)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Movie Details Page
+
+(View detailed information about the selected movie)
+![](./src/assets/images/detailpage.png)
+
+### Favorites Page
+
+(View and manage your favorite movies)
+
+![](./src/assets/images/favoritepage.png)
+
+## Features 🌟
+
+- Movie Categories:
+  On the homepage, movies are listed under three categories:
+
+- - 🏆 Top Rated
+- - 🔥 Trending
+- - 🌟 Popular
+- Pages:
+
+- - Homepage: Browse movies by category.
+- - Movie Details: Get detailed information about a selected movie.
+- - Favorites: View and manage your list of favorite movies.
+- Add/Remove Favorites: Easily add or remove movies from your favorites list.
+
+- User-Friendly Interface: Navigate seamlessly through the app.
+
+- Modern Design: Styled with TailwindCSS for a clean and responsive look.
+
+## Technologies Used 🛠️
+
+- Language: TypeScript
+- Framework: React
+- Project Setup: Vite
+- State Management: Redux Toolkit Query
+- API: TMDb API
+- Styling: TailwindCSS
+- Icons: React Icons
+
+### Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/ozerbaykal/Movie-App.git
+
+   cd Movie-App
+
+   cd MovieApp
+
+   ```
+
+2. Install dependencies:
+
+```
+ npm install
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+npm run dev
+```
+
+3.  Open the application in your browser:
+
+```
+http://localhost:3000
+
+```
+
+## Contributing
+
+Contributions are welcome! Please open an issue first to discuss what you would like to change.
+
+- 1.Fork the project
+- 2.Create your feature branch (git checkout -b feature/NewFeature)
+- 3.Commit your changes (git commit -m 'Add new feature')
+- 4.Push to the branch (git push origin feature/NewFeature)
+- 5.Open a Pull Request
+
+<h2>Contact</h2>
+
+Özer BAYKAL mail : baykalozer87@gmail.com
+
+Project Link:https://github.com/ozerbaykal/Movie-App

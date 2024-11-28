@@ -1,6 +1,6 @@
 
 type Props = {
-    children: string,
+    children: string[],
     designs?: string,
     onClick?: () => void;
 }

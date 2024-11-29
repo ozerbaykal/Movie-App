@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { useGetFavoritesQuery } from "../../ redux/api";
 import Container from "../../components/Container";
 import Error from "../../components/Error";
@@ -7,7 +8,7 @@ import MovieCard from "../../components/MovieCard";
 import Title from "../../components/Title";
 import { movieType } from "../../types";
 
-const Favorites = () => {
+const Favorites: FC = () => {
     const { data, isLoading, error } = useGetFavoritesQuery();
     return (
         <Container>

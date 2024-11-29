@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import Category from "../../components/Category"
 import Container from "../../components/Container"
 import MovieList from "../../components/MovieList"
 
-const Home = () => {
+const Home: FC = () => {
     const [selected, setSelected] = useState<string | null>("Trending");
     const categories = [
         { name: "Populars", endpoint: "/movie/popular" },

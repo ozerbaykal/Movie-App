@@ -8,10 +8,10 @@ import Error from "../../components/Error";
 import { baseImgUrl } from "../../constans";
 import Title from "../../components/Title";
 import ListDetail from "./ListDetail";
+import { FC } from "react";
 
-const Detail = () => {
+const Detail: FC = () => {
     const { id } = useParams();
-    console.log(id);
     const { data, isLoading, error } = useGetDetailQuery(id);
     return (
         <Container>

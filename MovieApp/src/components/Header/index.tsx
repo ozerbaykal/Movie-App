@@ -2,8 +2,9 @@ import { FaHome } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { MdFavoriteBorder } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { FC } from "react";
 
-const Header = () => {
+const Header: FC = () => {
     return (
         <header className="p-3 flex justify-between items-center gap-5">
             <div className="bg-amber-500 p-2 rounded-md cursor-pointer hover:opacity-80">

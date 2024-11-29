@@ -1,13 +1,13 @@
 import { SerializedError } from "@reduxjs/toolkit";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
-
+import { FC } from "react";
 type Props = {
     data: FetchBaseQueryError | SerializedError;
     refetch?: () => void
 };
 
 
-const Error = ({ data, refetch }: Props) => {
+const Error: FC<Props> = ({ data, refetch }) => {
     return (
         <div className="bg-red-500 px-4  py-5 rounded-lg text-center w-3/4 ">
 

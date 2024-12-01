@@ -1,8 +1,8 @@
 import { SerializedError } from "@reduxjs/toolkit";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 import { FC } from "react";
-type Props = {
-    data: FetchBaseQueryError | SerializedError;
+export type Props = {
+    data: FetchBaseQueryError | SerializedError | null;
     refetch?: () => void
 };
 

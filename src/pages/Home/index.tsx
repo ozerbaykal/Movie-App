@@ -2,10 +2,17 @@ import { FC, useState } from "react";
 import Category from "../../components/Category";
 import Container from "../../components/Container";
 import MovieList from "../../components/MovieList";
+import Error from "../../components/Error";
+import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
+import { SerializedError } from "@reduxjs/toolkit";
 
 const Home: FC = () => {
     const [selected, setSelected] = useState<string | null>("Trending");
+    const [error, setError] = useState<FetchBaseQueryError | SerializedError | null>(null);
 
+    const refetch = () => {
+        setError(null);
+    };
     const categories = [
         { name: "Populars", endpoint: "/movie/popular" },
         { name: "Trending", endpoint: "/trending/movie/day" },
@@ -17,10 +24,7 @@ const Home: FC = () => {
     if (!currentCategory) {
         return (
             <Container>
-                <p className="text-center text-red-500">
-                    Bİr hata oluştu
-                    Lütfen geçerli bir kategori seçiniz
-                </p>
+                <Error data={error} refetch={refetch} />
             </Container>
         );
     }

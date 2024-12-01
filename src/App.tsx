@@ -1,17 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./components/Header"
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Favorites from "./pages/Favorites";
-import { FC } from "react";
+import { FC, ReactElement } from "react";
 
-
-const App: FC = () => {
+const App: FC = (): ReactElement => {
   return (
     <BrowserRouter>
-
-
-
       <div className="min-h-screen bg-black text-white p-5 lg:p-10">
         <Header />
         <Routes>
@@ -24,6 +20,4 @@ const App: FC = () => {
   );
 };
 
-
-
-export default App 
+export default App;

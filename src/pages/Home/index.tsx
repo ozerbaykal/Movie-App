@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, ReactElement, useState } from "react";
 import Category from "../../components/Category";
 import Container from "../../components/Container";
 import MovieList from "../../components/MovieList";
@@ -6,8 +6,9 @@ import Error from "../../components/Error";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 import { SerializedError } from "@reduxjs/toolkit";
 
-const Home: FC = () => {
+const Home: FC = (): ReactElement => {
     const [selected, setSelected] = useState<string | null>("Trending");
+
     const [error, setError] = useState<FetchBaseQueryError | SerializedError | null>(null);
 
     const refetch = () => {

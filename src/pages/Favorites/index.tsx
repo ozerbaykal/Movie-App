@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactElement } from "react";
 import { useGetFavoritesQuery } from "../../redux/api";
 import Container from "../../components/Container";
 import Error from "../../components/Error";
@@ -8,7 +8,7 @@ import MovieCard from "../../components/MovieCard";
 import Title from "../../components/Title";
 import { movieType } from "../../types";
 
-const Favorites: FC = () => {
+const Favorites: FC = (): ReactElement => {
     const { data, isLoading, error } = useGetFavoritesQuery();
     return (
         <Container>
